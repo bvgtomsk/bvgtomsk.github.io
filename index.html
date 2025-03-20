@@ -22,7 +22,7 @@
         fetch("https://3scc6x-38-180-236-223.ru.tuna.am/auth", {
             method: "POST",
             headers: {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"},
-            body: JSON.stringify({tg.initDataUnsafe})
+            body: JSON.stringify(tg.initDataUnsafe)
         }).then(response => response.json())
           .then(data => console.log("Auth response:", data))
           .catch(error => console.error("Auth error:", error));
