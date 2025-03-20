@@ -18,6 +18,7 @@
         console.log("sending data:", tg.initData)
         fetch("https://rh159d-38-180-236-223.ru.tuna.am", {
             method: "POST",
+            mode: "no-cors",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({initData: tg.initData})
         }).then(response => response.json())
