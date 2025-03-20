@@ -15,14 +15,14 @@
         const user = tg.initDataUnsafe.user;
         let username = user?.first_name || "Guest"
         document.getElementById("hello").innerText = "Hello, " + username +"!";
-
+        console.log("sending data:", tg.initData)
         fetch("https://yu2zvw-38-180-236-223.ru.tuna.am/auth/", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({initData: tg.initData})
         }).then(response => response.json())
-          .then(data => alert(data.status + "\n" + data.message + "\n" + data.token))
-          .catch(error => alert(error.status + "\n" + error.message));
+          .then(data => console.log("Auth response:", data))
+          .catch(error => console.error("Auth error:", error));
     </script>
 </body>
 </html>
