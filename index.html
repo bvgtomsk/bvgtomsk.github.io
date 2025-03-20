@@ -21,7 +21,7 @@
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({initData: tg.initData})
         }).then(response => response.json())
-          .then(data => alert(data.status + "\n" + data.message + "n\" + data.token))
+          .then(data => alert(data.status + "\n" + data.message + "\n" + data.token))
           .catch(error => alert(error.status + "\n" + error.message));
     </script>
 </body>
