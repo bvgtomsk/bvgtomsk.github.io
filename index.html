@@ -16,7 +16,7 @@
         let username = user?.first_name || "Guest"
         document.getElementById("hello").innerText = "Hello, " + username +"!";
         console.log("sending data:", tg.initData)
-        fetch("https://yu2zvw-38-180-236-223.ru.tuna.am/auth/", {
+        fetch("https://rh159d-38-180-236-223.ru.tuna.am"), {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({initData: tg.initData})
